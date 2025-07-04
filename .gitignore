@@ -3,8 +3,10 @@
 
 # ignore configuration files
 .env
-/data/html/*
-/data/mysql/*
+data/html/*
+data/mysql/*
+!data/html/.gitkeep
+!data/mysql/.gitkeep
 
 # ignore plugins
 plugins/*
