@@ -16,5 +16,6 @@ plugins/*
 
 # ignoge themes
 themes/*
+themes/recruitment-task-backend/vendor
 !themes/recruitment-task-backend
 !themes/index.php
