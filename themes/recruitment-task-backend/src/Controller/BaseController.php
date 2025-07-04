@@ -34,10 +34,6 @@ class BaseController extends \WP_REST_Controller
             ],
         ];
 
-        if (!empty($errors)) {
-            $result['error']['errors'] = $errors;
-        }
-
         return rest_ensure_response(new \WP_REST_Response($result, $status));
     }
 }
