@@ -2,6 +2,8 @@
 
 namespace RecruitmentTaskBackend\Controller;
 
+use RecruitmentTaskBackend\Helper\IconHelper;
+
 class ModuleController extends BaseController
 {
     /**
@@ -11,21 +13,25 @@ class ModuleController extends BaseController
     public function getModule(\WP_REST_Request $request): \WP_Error|\WP_HTTP_Response|\WP_REST_Response
     {
         $moduleData = [
-            [
-                'icon' => get_template_directory_uri() . '/img/HeadCircuit.svg',
-                'title' => '200',
-                'text' => 'Lorem ipsum dolor sit amet',
-            ],
-            [
-                'icon' => get_template_directory_uri() . '/img/UsersThree.svg',
-                'title' => '120',
-                'text' => 'Lorem ipsum dolor sit amet',
-            ],
-            [
-                'icon' => get_template_directory_uri() . '/img/Star.svg',
-                'title' => '10',
-                'text' => 'Lorem ipsum dolor sit amet',
-            ],
+            'header' => 'Headline',
+            'subheader' => 'Lorem ipsum dolor sit amet',
+            'module' => [
+                [
+                    'icon' => IconHelper::get('HeadCircuit'),
+                    'title' => '200',
+                    'text' => 'Lorem ipsum dolor sit amet',
+                ],
+                [
+                    'icon' => IconHelper::get('UsersThree'),
+                    'title' => '120',
+                    'text' => 'Lorem ipsum dolor sit amet',
+                ],
+                [
+                    'icon' => IconHelper::get('Star'),
+                    'title' => '10',
+                    'text' => 'Lorem ipsum dolor sit amet',
+                ],
+            ]
         ];
 
         return $this->success($moduleData);
