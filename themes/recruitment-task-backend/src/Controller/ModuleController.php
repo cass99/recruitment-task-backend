@@ -7,10 +7,9 @@ use RecruitmentTaskBackend\Helper\IconHelper;
 class ModuleController extends BaseController
 {
     /**
-     *  @param \WP_REST_Request $request
      *  @return \WP_Error|\WP_HTTP_Response|\WP_REST_Response
      */
-    public function getModule(\WP_REST_Request $request): \WP_Error|\WP_HTTP_Response|\WP_REST_Response
+    public function getModule(): \WP_Error|\WP_HTTP_Response|\WP_REST_Response
     {
         $moduleData = [
             'header' => 'Headline',
