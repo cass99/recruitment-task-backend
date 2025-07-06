@@ -25,7 +25,7 @@ class BaseController extends \WP_REST_Controller
      *  @param array $errors associative array of key => description
      *  @return \WP_Error|\WP_HTTP_Response|\WP_REST_Response
      */
-    protected function error(mixed $errorMessage, int $status = 400, array $errors = []) : \WP_Error|\WP_HTTP_Response|\WP_REST_Response
+    protected function error(mixed $errorMessage, int $status = 400) : \WP_Error|\WP_HTTP_Response|\WP_REST_Response
     {
         $result = [
             'error' => [
